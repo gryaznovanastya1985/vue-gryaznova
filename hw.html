@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hw.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script defer src="hw.js"> </script>
+
+</head>
+
+<body id="body">
+    <div id="example">
+        <div class="flex-container">
+            <input v-model="watchInput" />
+            <button v-on:click="getAnswer">получить данные в консоль</button>
+            <button v-on:click="addTodo">добавить к списку</button>
+            <button v-on:click="deleteItem">удалить</button>
+            <button v-on:click="sortList">сортировка</button>
+        </div>
+        <ol>
+            <todo-item-new-test v-for="item in groceryList" v-bind:todo="item"></todo-item-new-test>
+        </ol>
+    </div>
+
+
+</body>
